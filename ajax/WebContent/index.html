@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul class="th">
+		<list id="persions"> 
+		
+		
+		    <li>**姓名：${name}  **年龄：${age}  **性别:${sex}</li>
+		    
+			<if exp="${sex}==1">
+			<li style="color: red" class="li-red">${name}/${age}/男</li>
+			</if> 
+			
+			<else>
+			<li style="color:blue" class="li">${name}/${age}/女</li>
+			</else> 
+			
+		    <li>姓名：${name}  年龄：${age}  性别:${sex}</li>
+		    <li>--姓名：${name}  --年龄：${age}  --性别:${sex}</li>
+		    <p><br>
+		</list>
+	</ul>
+
+     <ul class="th">
+		<list id="ps"> 
+		    <li>姓名：${name}  ---  年龄：${age}  ---  性别:${sex}</li>
+		    <p><br>
+		</list>
+	</ul>
+
+
+
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
+<script type="text/javascript" src="js/soon.js"></script>
+<script type="text/javascript">
+	var persions = new List();
+
+	var p1 = new Map();
+	p1.put("name", "JIMI")
+	p1.put("age", "28")
+	p1.put("sex", "1")
+
+	var p2 = new Map();
+	p2.put("name", "TOM")
+	p2.put("age", "11")
+	p2.put("sex", "1")
+	
+	var p3 = new Map();
+	p3.put("name", "SMIS")
+	p3.put("age", "34")
+	p3.put("sex", "0")
+	
+	var p4= new Map();
+	p4.put("name", "JACK")
+	p4.put("age", "22")
+	p4.put("sex", "1")
+
+	persions.add(p1);
+	persions.add(p2);
+	persions.add(p3);
+	persions.add(p4);
+
+	 
+	
+	var free = new Free();
+	 
+	free.replace("ps",persions);
+	free.replace("persions",persions);
+	 
+
+	 
+</script>
+
+</html>
